@@ -84,7 +84,7 @@ Section:NewButton("Toggle PKN", "Toggle Player Kill Notification.", function()
     print("Trime -S: PKN Toggled! Place ID:", game.PlaceId)
 end)
 
-Section:NewButton("Toggle Teleport", "When activated, pressing Z will teleport to the enemy player's base", function()
+Section:NewButton("Toggle Teleport (C)", "When activated, pressing C will teleport to the enemy player's base", function()
     tpEnabled = not tpEnabled
     if tpEnabled then
         game:GetService("StarterGui"):SetCore("SendNotification", {
