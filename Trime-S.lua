@@ -12,6 +12,7 @@ local userInputService = game:GetService("UserInputService")
 local PKN = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-PKN/main/pkn.lua'))()
 local ESP = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-ESP/main/esp.lua'))()
 local TP = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-TP/main/tp.lua'))()
+local tpEnabled = false
 
 print("Trime -S: Succesfully injected! Developed by: Metricsect Dev & mutocan_baba1")
 
@@ -61,7 +62,7 @@ end)
 Section:NewSlider("Speed Hack", "This slider adjusts the speed hack.", 200, 16, function(speed)
     humanoid.WalkSpeed = speed
 end)
-Section:NewSlider("Jump Hack", "This slider adjusts the jump power hack.", 500, 50, function(jumpPower)
+Section:NewSlider("Jump Hack", "This slider adjusts the jump power hack.", 1000, 50, function(jumpPower)
     humanoid.JumpPower = jumpPower
 end)
 
@@ -83,8 +84,19 @@ Section:NewButton("Toggle PKN", "Toggle Player Kill Notification.", function()
     print("Trime -S: PKN Toggled! Place ID:", game.PlaceId)
 end)
 
-Section:NewButton("Teleport", "Teleports to enemy team's base.", function()
-    TP:checkAndMovePlayer()
+Section:NewButton("Toggle Teleport", "When activated, pressing Z will teleport to the enemy player's base", function()
+    tpEnabled = not tpEnabled
+    if tpEnabled then
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Trime -S";
+            Text = "TP Enabled!";
+        })
+    else
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Trime -S";
+            Text = "TP Disabled!";
+        })
+    end
 end)
 
 local function onKeyPressZ(input, gameProcessed)
@@ -105,6 +117,8 @@ local function onKeyPressC(input, gameProcessed)
     end
 
     if disabled then return end
+
+    if not tpEnabled then return end
 
     if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.C then
         TP:checkAndMovePlayer()
