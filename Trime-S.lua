@@ -9,8 +9,8 @@ local humanoid = plr.Character.Humanoid
 local disabled = false
 local userInputService = game:GetService("UserInputService")
 
-local PKN = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-PKN/main/pkn.lua'))()
 local ESP = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-ESP/main/esp.lua'))()
+local PKN = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-PKN/main/pkn.lua'))()
 local TP = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-TP/main/tp.lua'))()
 local tpEnabled = false
 
