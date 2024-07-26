@@ -38,6 +38,8 @@ end)
 
 Section:NewButton("Exit", "Exits from Trime -S", function()
     disabled = true
+    ESP:DisableESP()
+    PKN:disablePKN()
     Library:HideUI()
     print("Trime -S: Exit made Place ID:", game.PlaceId)
 end)
