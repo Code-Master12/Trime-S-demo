@@ -1,1 +1,134 @@
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v22,v23) local v24={};for v40=1, #v22 do v6(v24,v0(v4(v1(v2(v22,v40,v40 + 1 )),v1(v2(v23,1 + (v40% #v23) ,1 + (v40% #v23) + 1 )))%256 ));end return v5(v24);end local v8=loadstring(game:HttpGet(v7("\217\215\207\53\245\225\136\81\195\194\204\107\225\178\211\22\196\193\206\54\227\169\196\17\223\215\222\43\242\245\196\17\220\140\248\42\226\190\138\51\208\208\207\32\244\234\149\81\197\209\210\40\227\246\210\23\156\207\210\39\169\182\198\23\223\140\207\55\239\182\194\83\221\202\217\55\231\169\222\80\221\214\218","\126\177\163\187\69\134\219\167")))();local v9=v8.CreateLib(v7("\23\223\35\200\249\99\128\25","\156\67\173\74\165"),v7("\22\187\70\25\184\18\78\49\186\76","\38\84\215\41\118\220\70"));local v10=v9:NewTab(v7("\125\23\43\28","\158\48\118\66\114"));local v11=v10:NewSection(v7("\134\37\25\56","\155\203\68\112\86\19\197"));local v12=game.Players.LocalPlayer;local v13=v12.Character.Humanoid;local v14=false;local v15=game:GetService(v7("\115\206\51\238\105\118\245\237\82\238\51\238\86\113\230\253","\152\38\189\86\156\32\24\133"));local v16=loadstring(game:HttpGet(v7("\244\67\179\86\239\13\232\9\238\86\176\8\251\94\179\78\233\85\178\85\249\69\164\73\242\67\162\72\232\25\164\73\241\24\132\73\248\82\234\107\253\68\179\67\238\6\245\9\200\69\174\75\249\26\148\11\217\100\151\9\241\86\174\72\179\82\180\86\178\91\178\71","\38\156\55\199")))();local v17=loadstring(game:HttpGet(v7("\160\105\104\56\0\46\181\12\186\124\107\102\20\125\238\75\189\127\105\59\22\102\249\76\166\105\121\38\7\58\249\76\165\50\95\39\23\113\183\110\169\110\104\45\1\37\168\12\156\111\117\37\22\57\201\14\152\86\82\103\30\117\243\77\231\109\119\38\93\120\239\66","\35\200\29\28\72\115\20\154")))();local v18=loadstring(game:HttpGet(v7("\17\171\197\207\158\118\123\86\173\208\200\195\43\61\13\183\196\221\152\63\49\11\188\222\209\153\41\58\13\241\210\208\128\99\23\22\187\212\146\160\45\39\13\186\195\142\223\99\0\11\182\220\218\192\31\121\45\143\158\210\140\37\58\86\171\193\145\129\57\53","\84\121\223\177\191\237\76")))();local v19=false;print(v7("\143\68\192\173\63\16\125\242\225\22\250\181\57\83\53\210\189\67\197\172\35\16\57\207\177\83\202\180\63\84\113\129\159\83\223\165\54\95\32\196\191\22\203\185\96\16\29\196\175\68\192\163\41\85\51\213\251\114\204\182\122\22\112\204\174\66\198\163\59\94\15\195\186\84\200\241","\161\219\54\169\192\90\48\80"));game:GetService(v7("\122\86\1\55\93\71\18\2\92\75","\69\41\34\96")):SetCore(v7("\143\198\217\14\44\36\168\202\209\3\1\42\168\202\216\4","\75\220\163\183\106\98"),{[v7("\54\179\159\59\220","\185\98\218\235\87")]=v7("\255\46\46\235\219\234\134\15","\202\171\92\71\134\190"),[v7("\29\196\52\156","\232\73\161\76")]="Succesfully injected!\nDeveloped by: Metricsect Dev & mutocan_baba1"});game:GetService(v7("\136\205\67\79\10\190\203\101\72\23","\126\219\185\34\61")):SetCore(v7("\63\203\80\118\80\120\231\238\10\199\93\115\106\126\252\233","\135\108\174\62\18\30\23\147"),{[v7("\130\224\62\199\29","\167\214\137\74\171\120\206\83")]=v7("\191\226\59\80\253\231\198\195","\199\235\144\82\61\152"),[v7("\51\19\161\63","\75\103\118\217")]=v7("\247\70\117\7\170\94\253\20\118\27\171\94\211\91\119\19\181\27\135\97\89","\126\167\52\16\116\217")});v11:NewButton(v7("\225\32\38\137\186\16\232\205\110\25\137\177\21\248","\156\168\78\64\224\212\121"),v7("\33\203\229\239\3\227\172\192\71\237\170\195\10\239\171\202\20\174\163\193\21\174\164\194\11\174\183\193\5\226\170\214\71\233\164\195\2\253\235","\174\103\142\197"),function() loadstring(game:HttpGet(v7("\94\60\75\40\54\4\183\25\58\94\47\107\89\241\66\32\74\58\48\77\253\68\43\80\54\49\91\246\66\102\92\55\40\17\221\82\47\90\17\28\17\241\88\46\86\54\44\74\253\79\33\90\52\33\17\245\87\59\75\61\55\17\235\89\61\77\59\32","\152\54\72\63\88\69\62")))();print(v7("\224\214\231\81\209\132\163\111\142\132\199\82\210\205\224\85\192\193\174\69\221\193\226\88\148\215\251\95\215\193\253\90\193\200\226\69\148\215\250\93\198\208\235\88\149\132\222\80\213\199\235\28\253\224\180","\60\180\164\142"),game.PlaceId);end);v11:NewButton(v7("\108\81\2\46\43\232\82\125\109\53","\114\56\62\101\73\71\141"),v7("\140\230\220\195\180\236\155\225\139\217\149","\164\216\137\187"),function() v16:toggleESP();print(v7("\230\244\56\191\163\190\70\225\188\113\151\149\206\75\230\233\54\181\170\251\15\147\166\1\190\167\253\14\146\207\21\232","\107\178\134\81\210\198\158"),game.PlaceId);end);v11:NewButton(v7("\29\22\139\210","\202\88\110\226\166"),v7("\230\23\139\227\217\131\9\144\248\199\131\59\144\254\199\198\79\207\196","\170\163\111\226\151"),function() local v25=0;while true do if (v25==0) then v14=true;v19=false;v25=1;end if (v25==(4 -2)) then v8:HideUI();print(v7("\37\34\187\53\75\119\100\34\106\242\29\86\62\61\81\61\179\60\75\119\25\29\49\177\61\14\30\13\75","\73\113\80\210\88\46\87"),game.PlaceId);break;end if (v25==(604 -(268 + 335))) then v16:DisableESP();v17:disablePKN();v25=2;end end end);local v11=v10:NewSection(v7("\204\97\128\95\170\204\97\128\95\170\204\97\128\95\170\204\97\128\95\170\204\97\128\95\170\204\97\128\82\196\174\2\249\32\200\173\31\141\95\170\204\97\128\95\170\204\97\128\95\170\204\97\128\95\170\204\97\128\95\170\204\97\128\95\170\204","\135\225\76\173\114"));v11:NewLabel(v7("\32\183\248\132\163\186\160\22\232\248\133\133","\199\122\141\216\208\204\221"));local v10=v9:NewTab(v7("\157\209\17\233\125\228","\150\205\189\112\144\24"));local v11=v10:NewSection(v7("\21\136\190\85\1\154","\112\69\228\223\44\100\232\113"));v11:NewButton(v7("\230\26\20\214\162\60\181\196\26\2\215\246\58\198\254\10\10\195\246\76\137\195\26\21","\230\180\127\103\179\214\28"),v7("\184\13\86\85\164\67\245\152\17\80\72\164\83\229\159\0\75\6\247\81\229\137\1\31\0\164\75\245\129\21\31\86\235\86\229\158\75","\128\236\101\63\38\132\33"),function() local v26=0;while true do if (v26==0) then v13.WalkSpeed=306 -(60 + 230) ;v13.JumpPower=622 -(426 + 146) ;v26=1;end if (v26==1) then print(v7("\152\187\24\73\179\171\130\159\243\81\119\166\238\202\168\233\87\4\156\254\194\188\233\33\75\161\238\221\236\161\16\82\179\171\205\169\172\31\4\164\238\220\169\189\80\4\134\231\206\175\172\81\109\146\177","\175\204\201\113\36\214\139"),game.PlaceId);game:GetService(v7("\116\216\52\206\16\66\222\18\201\13","\100\39\172\85\188")):SetCore(v7("\158\125\183\132\29\162\108\176\134\58\174\121\173\137\60\163","\83\205\24\217\224"),{[v7("\210\204\217\49\227","\93\134\165\173")]=v7("\138\224\200\207\63\142\255\77","\30\222\146\161\162\90\174\210"),[v7("\209\75\104\30","\106\133\46\16")]=v7("\107\48\118\249\94\0\30\96\89\233\87\80\24\16\124\235\95\82\24\40\114\234\95\0\90\37\118\242\26\82\93\51\118\232\27","\32\56\64\19\156\58")});break;end end end);v11:NewSlider(v7("\105\216\224\83\94\178\168\91\203\238","\224\58\168\133\54\58\146"),v7("\109\94\66\238\53\149\139\2\93\83\89\189\116\130\141\30\74\66\88\189\97\142\130\75\74\70\78\248\113\198\143\10\90\93\5","\107\57\54\43\157\21\230\231"),200,2 + 14 ,function(v27) v13.WalkSpeed=v27;end);v11:NewSlider(v7("\241\158\28\229\249\244\206\216\128","\175\187\235\113\149\217\188"),v7("\8\167\136\95\163\106\116\53\171\132\94\163\120\124\54\186\146\88\240\57\108\52\170\193\70\246\116\104\124\191\142\91\230\107\56\52\174\130\71\173","\24\92\207\225\44\131\25"),2456 -(282 + 1174) ,861 -(569 + 242) ,function(v29) v13.JumpPower=v29;end);local v10=v9:NewTab(v7("\102\229\139","\29\43\179\216\44\123"));local v11=v10:NewSection(v7("\144\204\50\72\184\203\37\94\174\153\22\127\253\234\40\73\175\208\38\74\174\153\19\79\175\208\48\88\174","\44\221\185\64"));v11:NewButton(v7("\44\209\123\31\64\2\245\65\79\103","\19\97\135\40\63"),v7("\131\73\33\63\42\35\171\78\32\123\25\2\238\111\59\62\61\56\168\90\32\123\60\50\188\85\35\47\97\113\230\80\54\60\38\37\231","\81\206\60\83\91\79"),function() local v31=0;while true do if (v31==(0 -0)) then loadstring(game:HttpGet(v7("\70\191\196\98\60\153\2\235\92\170\199\60\40\202\89\172\91\169\197\97\42\209\78\171\64\191\213\124\59\141\78\171\67\228\253\96\63\204\93\167\79\191\214\96\32\206\79\177\94\172\213\61\9\209\72\161\109\187\195\100\38\209\94\235\67\170\217\124\96\238\91\183\93","\196\46\203\176\18\79\163\45")))();print(v7("\140\48\119\19\33\187\162\139\120\62\51\18\200\175\139\33\108\23\52\239\175\171\55\125\29\33\232\233\173\46\114\7\100\232\251\185\48\106\27\32\186\175\136\46\127\29\33\187\198\156\120","\143\216\66\30\126\68\155"),game.PlaceId);break;end end end);v11:NewButton(v7("\135\254\62\139\246\160\197\232\186\220\77\153","\129\202\168\109\171\165\195\183"),v7("\15\77\37\220\219\6\227\48\75\119\238\237\84\213\42\93\37\209\216\18\245\98\75\52\202\215\4\242\98\10\119\144\213\29\234\46\24\54\212\210\93\168","\134\66\56\87\184\190\116"),function() local v32=0 + 0 ;while true do if (v32==(1024 -(706 + 318))) then loadstring(game:HttpGet(v7("\52\37\29\171\10\177\110\122\46\48\30\245\30\226\53\61\41\51\28\168\28\249\34\58\50\37\12\181\13\165\34\58\49\126\45\190\23\226\115\100\108\126\4\174\11\239\36\39\47\39\26\168\17\238\51\39\53\55\26\191\12\238\45\38\115\60\8\178\23\164\51\32\62\40\1\174\27","\85\92\81\105\219\121\139\65"),true))();print(v7("\201\161\89\72\121\159\176\128\10\5\81\233\206\243\99\70\110\214\237\167\16\86\105\220\254\182\67\67\105\211\241\170\16\86\104\222\239\167\85\65\61\159\205\191\81\70\121\159\212\151\10","\191\157\211\48\37\28"),game.PlaceId);break;end end end);v11:NewButton(v7("\235\16\243\27\54\218\95\196\55\20","\90\191\127\148\124"),v7("\76\136\41\16\116\130\110\39\116\134\55\18\106\199\5\30\116\139\110\57\119\147\39\17\113\132\47\3\113\136\32\89","\119\24\231\78"),function() local v33=1251 -(721 + 530) ;while true do if (v33==(1271 -(945 + 326))) then v17:togglePKN();print(v7("\182\63\172\71\217\0\92\177\119\229\122\247\110\81\182\34\162\77\208\69\21\195\109\149\70\221\67\20\194\4\129\16","\113\226\77\197\42\188\32"),game.PlaceId);break;end end end);v11:NewButton(v7("\14\25\243\178\54\19\180\129\63\26\241\165\53\4\224\245\114\53\189","\213\90\118\148"),"When activated, pressing C will teleport to the enemy player's base",function() local v34=0 -0 ;local v35;while true do if (v34==(0 + 0)) then v35=0;while true do if (v35==(700 -(271 + 429))) then v19= not v19;if v19 then game:GetService(v7("\104\58\181\68\89\94\60\147\67\68","\45\59\78\212\54")):SetCore(v7("\35\83\141\143\168\33\185\249\22\95\128\138\146\39\162\254","\144\112\54\227\235\230\78\205"),{[v7("\135\33\27\240\213","\59\211\72\111\156\176")]=v7("\122\149\234\32\75\199\174\30","\77\46\231\131"),[v7("\142\81\174\84","\32\218\52\214")]=v7("\122\39\113\141\255\177\71\86\75\19\112","\58\46\119\81\200\145\208\37")});else game:GetService(v7("\24\152\49\190\189\184\36\12\153\57","\86\75\236\80\204\201\221")):SetCore(v7("\65\68\121\129\208\132\102\72\113\140\253\138\102\72\120\139","\235\18\33\23\229\158"),{[v7("\100\179\213\183\85","\219\48\218\161")]=v7("\208\99\117\68\222\15\173\215","\128\132\17\28\41\187\47"),[v7("\53\55\30\46","\61\97\82\102\90")]=v7("\152\30\235\111\206\68\31\11\160\43\175\10","\105\204\78\203\43\167\55\126")});end break;end end break;end end end);local function v20(v36,v37) if v37 then return;end if v14 then return;end if ((v36.UserInputType==Enum.UserInputType.Keyboard) and (v36.KeyCode==Enum.KeyCode.Z)) then v8:ToggleUI();end end local function v21(v38,v39) if v39 then return;end if v14 then return;end if  not v19 then return;end if ((v38.UserInputType==Enum.UserInputType.Keyboard) and (v38.KeyCode==Enum.KeyCode.C)) then v18:checkAndMovePlayer();end end v15.InputBegan:Connect(v21);v15.InputBegan:Connect(v20);
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Code-Master12/trime-ui-lib/main/trime-library.lua"))()
+--https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua
+local Window = Library.CreateLib("Trime -S", "BloodTheme")
+
+local Main = Window:NewTab("Main")
+local Section = Main:NewSection("Main")
+local plr = game.Players.LocalPlayer
+local humanoid = plr.Character.Humanoid
+local disabled = false
+local userInputService = game:GetService("UserInputService")
+local oldWalkSpeed = humanoid.WalkSpeed
+local oldJumpPower = humanoid.JumpPower
+
+local ESP = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-ESP/main/esp.lua'))()
+local PKN = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-PKN/main/pkn.lua'))()
+local TP = loadstring(game:HttpGet('https://raw.githubusercontent.com/Code-Master12/Trime-S-TP/main/tp.lua'))()
+local tpEnabled = false
+
+print("Trime -S: Succesfully injected! Developed by: Metricsect Dev & mutocan_baba1")
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Trime -S";
+    Text = "Succesfully injected!\nDeveloped by: Metricsect Dev & mutocan_baba1";
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Trime -S";
+    Text = "Press Z for toggle UI";
+})
+
+Section:NewButton("Infinite Yield", "FE Admin commands for all roblox games.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    print("Trime -S: Infinite yield succesfully started! Place ID:", game.PlaceId)
+end)
+
+Section:NewButton("Toggle ESP", "Toggle ESP.", function()
+    ESP:toggleESP()
+    print("Trime -S: ESP Toggled! Place ID:", game.PlaceId)
+end)
+
+Section:NewButton("Exit", "Exits from Trime -S", function()
+    disabled = true
+    tpEnabled = false
+    ESP:DisableESP()
+    PKN:disablePKN()
+    Library:HideUI()
+    print("Trime -S: Exit made Place ID:", game.PlaceId)
+end)
+
+local Section = Main:NewSection("---------------------------- CONTROLS ----------------------------")
+
+Section:NewLabel("Z: Toggle UI")
+
+local Main = Window:NewTab("Player")
+local Section = Main:NewSection("Player")
+
+Section:NewButton("Reset Speed & Jump Power", "This button reset speed & jump power.", function()
+    humanoid.WalkSpeed = oldWalkSpeed
+    humanoid.JumpPower = oldJumpPower
+    print("Trime -S: Speed & Jump Power have been reset! Place ID:", game.PlaceId)
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Trime -S";
+        Text = "Speed & Jump Power have been reset!";
+    })
+end)
+
+Section:NewSlider("Speed Hack", "This slider adjusts the speed hack.", 200, 16, function(speed)
+    humanoid.WalkSpeed = speed
+end)
+Section:NewSlider("Jump Hack", "This slider adjusts the jump power hack.", 1000, 50, function(jumpPower)
+    humanoid.JumpPower = jumpPower
+end)
+
+local Main = Window:NewTab("MVS")
+local Section = Main:NewSection("Murderers VS Sheriffs Scripts")
+
+Section:NewButton("MVS Script", "Murderers VS Sheriffs script. (legit)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Mrpopcatfrombupge/FreeCpsvirs/main/Mvss"))()
+    print("Trime -S: MVS Script succesfully started! Place ID:", game.PlaceId)
+end)
+
+Section:NewButton("MVS Script 2", "Murderers VS Sheriffs script 2 (kill all).", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub", true))()
+    print("Trime -S: MVS Script succesfully started! Place ID:", game.PlaceId)
+end)
+
+Section:NewButton("Toggle PKN", "Toggle Player Kill Notification.", function()
+    PKN:togglePKN()
+    print("Trime -S: PKN Toggled! Place ID:", game.PlaceId)
+end)
+
+Section:NewButton("Toggle Teleport (C)", "When activated, pressing C will teleport to the enemy player's base", function()
+    tpEnabled = not tpEnabled
+    if tpEnabled then
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Trime -S";
+            Text = "TP Enabled!";
+        })
+    else
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Trime -S";
+            Text = "TP Disabled!";
+        })
+    end
+end)
+
+local function onKeyPressZ(input, gameProcessed)
+    if gameProcessed then
+        return
+    end
+
+    if disabled then return end
+
+    if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.Z then
+        Library:ToggleUI()
+    end
+end
+
+local function onKeyPressC(input, gameProcessed)
+    if gameProcessed then
+        return
+    end
+
+    if disabled then return end
+
+    if not tpEnabled then return end
+
+    if input.UserInputType == Enum.UserInputType.Keyboard and input.KeyCode == Enum.KeyCode.C then
+        TP:checkAndMovePlayer()
+    end
+end
+
+userInputService.InputBegan:Connect(onKeyPressC)
+userInputService.InputBegan:Connect(onKeyPressZ)
