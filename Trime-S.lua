@@ -118,8 +118,8 @@ Section:NewToggle("Toggle Hitbox", "Toggle hitbox.", function(state)
     end
 end)
 
-Section:NewToggle("Toggle Hitbox Visibility", "Toggle hitbox visibility.", function()
-    HBOX:ToggleHBVisible()
+Section:NewToggle("Toggle Hitbox Visibility", "Toggle hitbox visibility.", function(state)
+    HBOX:SetHBVisible(state)
 end)
 
 Section:NewSlider("Hitbox Size", "Set players hitbox size.", 200, 0, function(size)
