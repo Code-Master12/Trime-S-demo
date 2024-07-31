@@ -107,21 +107,28 @@ end)
 Section:NewSlider("Hitbox", "Set players hitbox size.", 200, 0, function(hbSize)
     _G.HeadSize = hbSize
     _G.Disabled = true
+
+    if _G.Connection then
+        _G.Connection:Disconnect()
+    end
     
-    game:GetService('RunService').RenderStepped:connect(function()
-    if _G.Disabled then
-    for i,v in next, game:GetService('Players'):GetPlayers() do
-    if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-    pcall(function()
-    v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-    v.Character.HumanoidRootPart.Transparency = 0.7
-    v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
-    v.Character.HumanoidRootPart.Material = "Neon"
-    v.Character.HumanoidRootPart.CanCollide = false
-    end)
-    end
-    end
-    end
+    _G.Connection = game:GetService('RunService').RenderStepped:Connect(function()
+        if _G.Disabled then
+            for i, v in pairs(game:GetService('Players'):GetPlayers()) do
+                if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+                    pcall(function()
+                        local hrp = v.Character and v.Character:FindFirstChild("HumanoidRootPart")
+                        if hrp then
+                            hrp.Size = Vector3.new(_G.HeadSize, _G.HeadSize, _G.HeadSize)
+                            hrp.Transparency = 0.7
+                            hrp.BrickColor = BrickColor.new("Really blue")
+                            hrp.Material = Enum.Material.Neon
+                            hrp.CanCollide = false
+                        end
+                    end)
+                end
+            end
+        end
     end)
 end)
 
