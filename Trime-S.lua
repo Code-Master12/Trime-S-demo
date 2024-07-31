@@ -104,22 +104,49 @@ Section:NewToggle("Toggle Teleport (C)", "When activated, pressing C will telepo
     end
 end)
 
-Section:NewSlider("Hitbox", "Set players hitbox size.", 200, 0, function(hbSize)
-    _G.HeadSize = hbSize
-    _G.Disabled = true
+local hitboxEnabled = false
+local headSize = 2 -- Varsayılan boyut
+local connection
 
-    if _G.Connection then
-        _G.Connection:Disconnect()
+Section:NewToggle("Toggle Hitbox", "Toggle Hitbox.", function(state)
+    hitboxEnabled = state
+    if not hitboxEnabled then
+        if connection then
+            connection:Disconnect()
+            connection = nil
+        end
+
+        for i, v in pairs(game:GetService('Players'):GetPlayers()) do
+            if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+                pcall(function()
+                    local hrp = v.Character and v.Character:FindFirstChild("HumanoidRootPart")
+                    if hrp then
+                        hrp.Size = Vector3.new(2, 2, 1)
+                        hrp.Transparency = 0
+                        hrp.BrickColor = BrickColor.new("Medium stone grey")
+                        hrp.Material = Enum.Material.Plastic
+                        hrp.CanCollide = true
+                    end
+                end)
+            end
+        end
     end
-    
-    _G.Connection = game:GetService('RunService').RenderStepped:Connect(function()
-        if _G.Disabled then
+end)
+
+Section:NewSlider("Hitbox Size", "Set players hitbox size.", 200, 0, function(hbSize)
+    headSize = hbSize
+    if hitboxEnabled then
+        if connection then
+            connection:Disconnect()
+        end
+        
+        connection = game:GetService('RunService').RenderStepped:Connect(function()
             for i, v in pairs(game:GetService('Players'):GetPlayers()) do
                 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
                     pcall(function()
                         local hrp = v.Character and v.Character:FindFirstChild("HumanoidRootPart")
                         if hrp then
-                            hrp.Size = Vector3.new(_G.HeadSize, _G.HeadSize, _G.HeadSize)
+                            hrp.Size = Vector3.new(headSize, headSize, headSize)
                             hrp.Transparency = 0.7
                             hrp.BrickColor = BrickColor.new("Really blue")
                             hrp.Material = Enum.Material.Neon
@@ -128,8 +155,8 @@ Section:NewSlider("Hitbox", "Set players hitbox size.", 200, 0, function(hbSize)
                     end)
                 end
             end
-        end
-    end)
+        end)
+    end
 end)
 
 local function onKeyPressZ(input, gameProcessed)
