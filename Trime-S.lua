@@ -103,6 +103,7 @@ Section:NewToggle("Toggle Teleport (C)", "When activated, pressing C will telepo
                 Text = "TP Disabled!";
             })
         end
+    end
 end)
 
 local function onKeyPressZ(input, gameProcessed)
