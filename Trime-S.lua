@@ -109,14 +109,14 @@ local hitboxSize = 2
 
 local HBOX = loadstring(game:HttpGet("https://raw.githubusercontent.com/Code-Master12/Trime-S-HBOX/main/hitbox.lua"))()
 
-MainSection:NewSlider("Hitbox Size", "Set players hitbox size.", 200, 0, function(size)
+Section:NewSlider("Hitbox Size", "Set players hitbox size.", 200, 0, function(size)
     hitboxSize = size
     if hitboxEnabled then
         HBOX:EnableHitbox(hitboxSize)
     end
 end)
 
-MainSection:NewToggle("Toggle Hitbox", "Toggle hitbox.", function(state)
+Section:NewToggle("Toggle Hitbox", "Toggle hitbox.", function(state)
     hitboxEnabled = state
     if hitboxEnabled then
         HBOX:EnableHitbox(hitboxSize)
