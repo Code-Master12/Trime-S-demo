@@ -84,25 +84,23 @@ Section:NewButton("MVS Script 2", "Murderers VS Sheriffs script 2 (kill all).", 
     print("Trime -S: MVS Script succesfully started! Place ID:", game.PlaceId)
 end)
 
-Section:NewButton("Toggle PKN", "Toggle Player Kill Notification.", function()
+Section:NewToggle("Toggle PKN", "Toggle Player Kill Notification.", function(state)
     PKN:togglePKN()
     print("Trime -S: PKN Toggled! Place ID:", game.PlaceId)
 end)
 
 Section:NewToggle("Toggle Teleport (C)", "When activated, pressing C will teleport to the enemy player's base", function(state)
-    if state then
-        tpEnabled = not tpEnabled
-        if tpEnabled then
-            game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = "Trime -S";
-                Text = "TP Enabled!";
-            })
-        else
-            game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = "Trime -S";
-                Text = "TP Disabled!";
-            })
-        end
+    tpEnabled = not tpEnabled
+    if tpEnabled then
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Trime -S";
+            Text = "TP Enabled!";
+        })
+    else
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Trime -S";
+            Text = "TP Disabled!";
+        })
     end
 end)
 
