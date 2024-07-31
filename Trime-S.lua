@@ -105,12 +105,33 @@ Section:NewToggle("Toggle Teleport (C)", "When activated, pressing C will telepo
 end)
 
 local hitboxEnabled = false
-local headSize = 2 -- Varsayılan boyut
+local headSize = 2
 local connection
 
 Section:NewToggle("Toggle Hitbox", "Toggle Hitbox.", function(state)
     hitboxEnabled = state
-    if not hitboxEnabled then
+    if hitboxEnabled then
+        if connection then
+            connection:Disconnect()
+        end
+
+        connection = game:GetService('RunService').RenderStepped:Connect(function()
+            for i, v in pairs(game:GetService('Players'):GetPlayers()) do
+                if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+                    pcall(function()
+                        local hrp = v.Character and v.Character:FindFirstChild("HumanoidRootPart")
+                        if hrp then
+                            hrp.Size = Vector3.new(headSize, headSize, headSize)
+                            hrp.Transparency = 0.7
+                            hrp.BrickColor = BrickColor.new("Really blue")
+                            hrp.Material = Enum.Material.Neon
+                            hrp.CanCollide = false
+                        end
+                    end)
+                end
+            end
+        end)
+    else
         if connection then
             connection:Disconnect()
             connection = nil
