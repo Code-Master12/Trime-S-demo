@@ -118,7 +118,7 @@ Section:NewToggle("Toggle Hitbox", "Toggle hitbox.", function(state)
     end
 end)
 
-MainSection:NewButton("Toggle Hitbox Visibility", "Toggle hitbox visibility.", function()
+Section:NewButton("Toggle Hitbox Visibility", "Toggle hitbox visibility.", function()
     HBOX:ToggleHBVisible()
 end)
 
