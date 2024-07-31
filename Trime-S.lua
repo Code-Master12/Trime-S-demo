@@ -33,7 +33,7 @@ Section:NewButton("Infinite Yield", "FE Admin commands for all roblox games.", f
     print("Trime -S: Infinite yield succesfully started! Place ID:", game.PlaceId)
 end)
 
-Section:NewButton("Toggle ESP", "Toggle ESP.", function()
+Section:NewToggle("Toggle ESP", "Toggle ESP.", function(state)
     ESP:toggleESP()
     print("Trime -S: ESP Toggled! Place ID:", game.PlaceId)
 end)
