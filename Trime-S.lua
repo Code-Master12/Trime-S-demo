@@ -104,7 +104,7 @@ Section:NewToggle("Toggle Teleport (C)", "When activated, pressing C will telepo
     end
 end)
 
-Section:NewSlider("Hitbox", "Set players hitbox size.", 300, 0, function(hbSize)
+Section:NewSlider("Hitbox", "Set players hitbox size.", 200, 0, function(hbSize)
     _G.HeadSize = hbSize
     _G.Disabled = true
     
