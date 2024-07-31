@@ -106,77 +106,22 @@ end)
 
 local hitboxEnabled = false
 local headSize = 2
-local connection
 
-Section:NewToggle("Toggle Hitbox", "Toggle Hitbox.", function(state)
-    hitboxEnabled = state
+local HBOX = loadstring(game:HttpGet("https://raw.githubusercontent.com/Code-Master12/Trime-S-HBOX/main/hitbox.lua"))()
+
+MainSection:NewSlider("Hitbox Size", "Set players hitbox size.", 200, 0, function(size)
+    hitboxSize = size
     if hitboxEnabled then
-        if connection then
-            connection:Disconnect()
-        end
-
-        connection = game:GetService('RunService').RenderStepped:Connect(function()
-            for i, v in pairs(game:GetService('Players'):GetPlayers()) do
-                if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-                    pcall(function()
-                        local hrp = v.Character and v.Character:FindFirstChild("HumanoidRootPart")
-                        if hrp then
-                            hrp.Size = Vector3.new(headSize, headSize, headSize)
-                            hrp.Transparency = 0.7
-                            hrp.BrickColor = BrickColor.new("Really blue")
-                            hrp.Material = Enum.Material.Neon
-                            hrp.CanCollide = false
-                        end
-                    end)
-                end
-            end
-        end)
-    else
-        if connection then
-            connection:Disconnect()
-            connection = nil
-        end
-
-        for i, v in pairs(game:GetService('Players'):GetPlayers()) do
-            if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-                pcall(function()
-                    local hrp = v.Character and v.Character:FindFirstChild("HumanoidRootPart")
-                    if hrp then
-                        hrp.Size = Vector3.new(2, 2, 1)
-                        hrp.Transparency = 0
-                        hrp.BrickColor = BrickColor.new("Medium stone grey")
-                        hrp.Material = Enum.Material.Plastic
-                        hrp.CanCollide = true
-                    end
-                end)
-            end
-        end
+        HBOX:EnableHitbox(hitboxSize)
     end
 end)
 
-Section:NewSlider("Hitbox Size", "Set players hitbox size.", 200, 0, function(hbSize)
-    headSize = hbSize
+MainSection:NewToggle("Toggle Hitbox", "Toggle hitbox.", function(state)
+    hitboxEnabled = state
     if hitboxEnabled then
-        if connection then
-            connection:Disconnect()
-        end
-        
-        connection = game:GetService('RunService').RenderStepped:Connect(function()
-            for i, v in pairs(game:GetService('Players'):GetPlayers()) do
-                if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-                    pcall(function()
-                        local hrp = v.Character and v.Character:FindFirstChild("HumanoidRootPart")
-                        if hrp then
-                            hrp.Size = Vector3.new(headSize, headSize, headSize)
-                            hrp.Transparency = 0.7
-                            hrp.BrickColor = BrickColor.new("Really blue")
-                            hrp.Material = Enum.Material.Neon
-                            hrp.CanCollide = false
-                        end
-                    end)
-                end
-            end
-        end)
+        HBOX:EnableHitbox(hitboxSize)
+    else
+        HBOX:DisableHitbox()
     end
 end)
 
