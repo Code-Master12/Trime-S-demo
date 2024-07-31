@@ -105,7 +105,7 @@ Section:NewToggle("Toggle Teleport (C)", "When activated, pressing C will telepo
 end)
 
 local hitboxEnabled = false
-local headSize = 2
+local hitboxSize = 2
 
 local HBOX = loadstring(game:HttpGet("https://raw.githubusercontent.com/Code-Master12/Trime-S-HBOX/main/hitbox.lua"))()
 
